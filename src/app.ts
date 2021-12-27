@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 import { ConnectionOptions } from 'mongoose'
 
     // Database Name
-    const dbName: string = 'car_db'
+    const dbName: string = 'user_db'
     var dbURL: string = 'mongodb://localhost/'
 
 const app: Application = express()
@@ -21,9 +21,13 @@ const options: ConnectionOptions = {
 
 const CONNECTION_URL = process.env.CONNECTION_URL
 
-
+import {authRouters} from './routes/auth.route'
+import {userRouters} from './routes/user.route'
 import {router} from './routes/car.route'
-app.use('/', router)
+
+app.use('/api/auth',authRouters)
+app.use('/api/user', userRouters)
+app.use('/api/car', router)
 
 const PORT = process.env.PORT || 3030;
 app.listen((PORT),

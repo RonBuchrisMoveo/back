@@ -7,5 +7,3 @@ router.get('/', getCars)
 router.post('/', addCar)
 router.put('/:id', updateCar)
 router.delete('/:id', removeCar)
-
-// module.exports = router
