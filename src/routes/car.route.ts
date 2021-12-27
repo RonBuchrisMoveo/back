@@ -5,5 +5,5 @@ export const router = express.Router()
 
 router.get('/', getCars)
 router.post('/', addCar)
-router.put('/:id', updateCar)
-router.delete('/:id', removeCar)
+// router.put('/:id', updateCar)
+// router.delete('/:id', removeCar)
