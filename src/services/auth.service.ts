@@ -12,7 +12,7 @@ export async function onLogin(name: any, password: any) {
         _id:user._id,
         name:user.name,
         email:user.email,
-        phone:user.phone
+        phone:user.phonec
     }
 }
 
