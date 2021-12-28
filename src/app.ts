@@ -1,6 +1,8 @@
 import express, { Application, Request, Response } from 'express'
 const cors = require('cors')
 const mongoose = require('mongoose')
+require('dotenv').config()
+
 import { ConnectionOptions } from 'mongoose'
 
     // Database Name

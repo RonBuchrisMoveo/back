@@ -9,10 +9,10 @@ export async function onLogin(name: any, password: any) {
     if(!match) return Promise.reject('Invalid username or password')
 
     return {
-        _id:user._id,
         name:user.name,
         email:user.email,
-        phone:user.phonec
+        phone:user.phone,
+        isAdmin:user.isAdmin
     }
 }
 
@@ -24,6 +24,6 @@ export async function signUp(name: any, password: any, email: any) {
 
     return add({
     name, password: hash, email,
-    phone: ''
+    phone: '',isAdmin:false
 })
 }
