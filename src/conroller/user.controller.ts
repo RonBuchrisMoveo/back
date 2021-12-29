@@ -2,6 +2,7 @@ import { Request, Response } from 'express'
 import { IUser } from '../interface/user.interface'
 import { query, add, remove, update } from '../services/user.service'
 
+
 //GET LIST
 export async function getUsers(req: Request, res: Response): Promise<void> {
     try {

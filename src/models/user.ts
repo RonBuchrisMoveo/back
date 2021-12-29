@@ -1,4 +1,5 @@
 import db from 'mongoose'
+const jwt = require('jsonwebtoken')
 
 
 const userSchema = new db.Schema({
