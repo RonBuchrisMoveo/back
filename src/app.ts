@@ -6,7 +6,7 @@ require('dotenv').config()
 import { ConnectionOptions } from 'mongoose'
 
     // Database Name
-    const dbName: string = 'user_db'
+    const dbName: string = 'data_db'
     var dbURL: string = 'mongodb://localhost/'
 
 const app: Application = express()

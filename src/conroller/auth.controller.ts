@@ -3,13 +3,6 @@ import { signUp, onLogin } from '../services/auth.service'
 import signJWT from '../function/signJWT'
 
 
-export function validateToken (req: Request, res: Response, next: NextFunction){
-    return res.status(200).json({
-        message: 'Token(s) validated'
-    });
-};
-
-
 export async function login(req: any, res: Response, next: NextFunction) {
     const { name, password } = req.body
     try {

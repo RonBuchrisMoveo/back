@@ -1,11 +1,10 @@
 import { ICar } from "src/interface/car.interface"
 const ObjectId = require('mongodb').ObjectId
 const Car = require('../models/car')
-const User = require('../models/user')
 
 
 export async function query():Promise<any> {
-    const cars :any = await User.find({})
+    const cars :any = await Car.find({})
     return cars
 }
 
